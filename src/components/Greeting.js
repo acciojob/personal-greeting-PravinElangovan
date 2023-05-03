@@ -16,7 +16,7 @@ function Greeting() {
     <div>
     <div>Enter Your name</div>
       <input type="text" placeholder="Enter your name" onChange={handleChange} />
-      <div>{finalOutput}</div>
+      <p>{finalOutput}</p>
     </div>
   );
 }
