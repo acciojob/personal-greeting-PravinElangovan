@@ -7,16 +7,21 @@ function Greeting() {
     setName(e.target.value);
   }
 
-  let finalOutput;
+  let finalOutput = "";
   if (name !== '') {
     finalOutput = `Hello ${name}`;
-  } 
+  }
+
+  let displayStyle = { display: "block" };
+  if (finalOutput === '') {
+    displayStyle = { display: "none" };
+  }
 
   return (
     <div>
-    <div>Enter Your name</div>
+      <div>Enter Your name</div>
       <input type="text" placeholder="Enter your name" onChange={handleChange} />
-      <p>{finalOutput}</p>
+      <p style={displayStyle}>{finalOutput}</p>
     </div>
   );
 }
